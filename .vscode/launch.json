@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "http://autoCompleteMunicipio.html",
+            "request": "launch",
+            "url": "http://autoCompleteMunicipio.html"
+        }
+    ]
+}

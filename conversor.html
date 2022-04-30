@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa nova linha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;500&family=Noto+Sans:ital,wght@0,300;0,500;1,300;1,500&family=Open+Sans:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Lexend', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 200;
+            box-sizing: border-box;
+        }
+
+        input {
+            font-family: inherit;
+            width: 6em;
+        }
+
+        h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        b {
+            font-weight: 500;
+        }
+
+        span.conv {
+            display: flex;
+            gap: 5px;
+        }
+
+        bl {
+            display: inline-block;
+            background-color: white;
+            height: 1.3em;
+            padding: 0 0.5em 0 0.1em;
+            border: 1px solid black;
+        }
+
+        bt {
+            display: inline-block;
+        }
+
+        div#titulo {
+            grid-area: t;
+        }
+
+        div#pesquisa {
+            grid-area: p;
+        }
+
+        div#pesquisa > div {
+            display: flex;
+            gap: 3em;
+        }
+
+        div#divSeletorMunicipios {
+            grid-area: m;
+        }
+
+        div#divLinhas {
+            grid-area: l;
+        }
+
+        div#linhasConvertidas {
+            grid-area: c;
+        }
+
+        div#novasLinhas {
+            grid-area: n;
+            padding: 2em 0 0 0;
+        }
+
+        div.elementosConversão {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr 3fr;
+            grid-template-rows: 15vh 1em 1em 1fr;
+            grid-template-areas:
+                'p p p'
+                't t t'
+                'm l c'
+                'n n c';
+
+
+            gap: 2em;
+        }
+
+        select#seletorLinhas,
+        select#seletorLinhas options {
+            width: 7em;
+        }
+    </style>
+
+    <script src="conversor.js"></script>
+</head>
+
+<body>
+
+    <div class="elementosConversão">
+        <div id="titulo">
+            <h1>Conversão de Linhas</h1>
+        </div>
+
+
+        <div id="divSeletorMunicipios"></div>
+
+        <div class="divLinhas" id="divSeletorLinhas"></div>
+
+        <div id="linhasConvertidas"></div>
+
+        <div id="novasLinhas"></div>
+
+        <div id="pesquisa">
+            <h1>Conversor para novas linhas</h1>
+            <div>
+                <div>
+                    <b>Linha atual</b><br>
+                    <input type="text" id="minhaCarreira" oninput="pesquisaNovaCarreira()" placeholder="insira">
+                </div>
+
+                <div id="carreiras"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
