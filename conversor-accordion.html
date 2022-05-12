@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa nova linha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;500&family=Noto+Sans:ital,wght@0,300;0,500;1,300;1,500&family=Open+Sans:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="conversor.css">
+    <script src="diretorio_municipios.js"></script>
+    <script src="diretorio_operadores.js"></script>
+    <script src="conversor.js"></script>
+</head>
+
+<body>
+
+    <div class="elementosConversao">
+        <div id="titulo">
+            <h1>Conversor de Linhas</h1>
+        </div>
+        <div>
+            Pesquisa por linha atual
+        </div>
+        <div id="pesquisa">
+            <div>
+                <input type="text" id="minhaCarreira" oninput="pesquisaNovaCarreira()" placeholder="insira">
+            </div>
+            <div id="carreiras"></div>
+        </div>
+    </div>
+
+    <div id="divSeletorMunicipios"></div>
+
+    <div id="divMunicipiosLinhas"></div>
+
+    <div id="linhasConvertidasMunicipio"></div>
+
+    <div id="divSeletorOperadores"></div>
+
+    <div id="divOperadoresLinhas"></div>
+
+    <div id="linhasConvertidasOperador"></div>
+
+    <div id="novasLinhasMunicipio"></div>
+
+    </div>
+
+</body>
+
+</html>

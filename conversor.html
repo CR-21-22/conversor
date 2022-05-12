@@ -11,128 +11,46 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;500&family=Noto+Sans:ital,wght@0,300;0,500;1,300;1,500&family=Open+Sans:ital,wght@0,500;1,500&display=swap"
         rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Lexend', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 200;
-            box-sizing: border-box;
-        }
 
-        input {
-            font-family: inherit;
-            width: 6em;
-        }
-
-        h1 {
-            font-family: 'Lexend', sans-serif;
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        b {
-            font-weight: 500;
-        }
-
-        span.conv {
-            display: flex;
-            gap: 5px;
-        }
-
-        bl {
-            display: inline-block;
-            background-color: white;
-            height: 1.3em;
-            padding: 0 0.5em 0 0.1em;
-            border: 1px solid black;
-        }
-
-        bt {
-            display: inline-block;
-        }
-
-        div#titulo {
-            grid-area: t;
-        }
-
-        div#pesquisa {
-            grid-area: p;
-        }
-
-        div#pesquisa > div {
-            display: flex;
-            gap: 3em;
-        }
-
-        div#divSeletorMunicipios {
-            grid-area: m;
-        }
-
-        div#divLinhas {
-            grid-area: l;
-        }
-
-        div#linhasConvertidas {
-            grid-area: c;
-        }
-
-        div#novasLinhas {
-            grid-area: n;
-            padding: 2em 0 0 0;
-        }
-
-        div.elementosConversão {
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 3fr 1fr 3fr;
-            grid-template-rows: 15vh 1em 1em 1fr;
-            grid-template-areas:
-                'p p p'
-                't t t'
-                'm l c'
-                'n n c';
-
-
-            gap: 2em;
-        }
-
-        select#seletorLinhas,
-        select#seletorLinhas options {
-            width: 7em;
-        }
-    </style>
-
+    <link rel="stylesheet" href="conversor.css">
+    <script src="diretorio_municipios.js"></script>
+    <script src="diretorio_operadores.js"></script>
     <script src="conversor.js"></script>
 </head>
 
 <body>
 
-    <div class="elementosConversão">
+    <div class="elementosConversao">
         <div id="titulo">
-            <h1>Conversão de Linhas</h1>
+            <h1>Conversor de Linhas</h1>
         </div>
-
-
-        <div id="divSeletorMunicipios"></div>
-
-        <div class="divLinhas" id="divSeletorLinhas"></div>
-
-        <div id="linhasConvertidas"></div>
-
-        <div id="novasLinhas"></div>
-
         <div id="pesquisa">
-            <h1>Conversor para novas linhas</h1>
             <div>
                 <div>
-                    <b>Linha atual</b><br>
+                    <b>Pesquisa por linha atual</b><br>
                     <input type="text" id="minhaCarreira" oninput="pesquisaNovaCarreira()" placeholder="insira">
                 </div>
 
                 <div id="carreiras"></div>
             </div>
         </div>
+        <hr>
+        <div id="divSeletorMunicipios"></div>
+
+        <div id="divMunicipiosLinhas"></div>
+
+        <div id="linhasConvertidasMunicipio"></div>
+        <hr>
+        <div id="divSeletorOperadores"></div>
+
+        <div id="divOperadoresLinhas"></div>
+
+        <div id="linhasConvertidasOperador"></div>
+        <hr>
+        <div id="novasLinhasMunicipio"></div>
+
     </div>
+
 </body>
 
 </html>

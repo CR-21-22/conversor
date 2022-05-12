@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa nova linha</title>
+</head>
+
+<body onload="append()">
+
+    <div id="diretorio"></div>
+
+    <script src="dados.js"></script>
+    <script>
+        function append() {
+                let text = '<select>';
+                for (let municipio in diretorio) {
+                    text += '<option value="">' + municipio + '</option>';
+                }
+                text += '</select>'
+                document.getElementById('diretorio').innerHTML = text; 
+        }
+
+
+        function completaMunicipio() {
+            if 
+        }
+
+        function pesquisa() {
+
+
+
+            var carreira_a_pesquisar = document.getElementById('myInput').value;
+
+            for (let municipio in diretorio) {
+                    for(let carreira )
+                };
+
+
+            document.getElementById('resultado').innerHTML = x;
+        }
+    </script>
+
+    <input type="text" id="myInput" oninput="pesquisa()">
+    <div id="resultado"></div>
+
+</body>
+
+</html>

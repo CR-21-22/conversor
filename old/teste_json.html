@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<script>
+    function descarrega_operadores() {
+        fetch("diretorio_operadores.json")
+            .then(response => response.json())
+            .then(json => processa(json));
+    }
+
+    function processa(json) {
+        console.log(json);
+    }
+</script>
+
+
+<body onload="descarrega_operadores()">
+
+    
+</body>
+
+</html>
